@@ -1,0 +1,43 @@
+---
+title: "Assignment Week 3"
+output: html_document
+---
+
+### Name: ....
+
+### ULCN: ....
+
+```{r label = preps, echo=FALSE}
+rm(list=ls(all=T)) #clears your workspace
+```
+
+
+
+We will compute or approximate the value of the expectation 
+
+$$I=E[X^2\mathbb{1}_{[1, \infty)}(X) ], \qquad X \sim \mathcal N(0, 1).$$
+
+
+### Exercise 1. Importance sampling
+
+- Obtain a Monte Carlo estimate of $I$ using importance sampling. (There are multiple solutions; make sure that your method is substantially more efficient than straightforward simulation from a normal distribution
+with mean zero.)
+
+- Calculate the MC approximation error.
+
+### Exercise 2. Antithetic variables
+
+- This time use antithetic variables for computing $I$.
+
+- Estimate the MC approximation error using simulation. Compare this to importance sampling.
+
+- Now combine antithetic variables with importance sampling to achieve maximal accuracy.
+
+- Compute the MC approximation error and compare to the previous methods.
+
+
+### Exercise 3. Metropolis-Hastings
+
+Let $f(x)=(2+\sin(1/x))\exp(-x^2)$.
+
+- Use the Metropolis-Hastings algorithm to sample from the distribution with density proportional to $f$, and plot a histogram. Use a suitable proposal distribution.

@@ -1,0 +1,28 @@
+Assignment for week 2
+=====================
+
+### Name: ....
+
+### ULCN: ....
+
+```{r echo=FALSE}
+rm(list=ls())
+```
+
+### Monte Carlo
+
+Let $\mathbf{X}=X_1,X_2,\ldots,X_{100}$ be i.i.d. Gamma distributed values with shape and scale parameters $20$ and $1$, respectively. Define $T(\mathbf{X})=\min\{X_1,\ldots,X_{100}\}$.
+
+- Estimate and plot the sampling distribution of $T$.
+- Estimate mean and standard error of $T$.
+- What is the approximation error for $E[T]$?
+- Estimate $P(T<10)$ using simulation.
+- Now work out $P(T<10)$ analytically, and calculate its value in R (hint: use the function `pgamma()`).
+
+### Hypothesis tests
+
+After observing a sequence $\mathbf{X}=X_1,\ldots,X_{100}$ of natural numbers, we wish to test whether these numbers are Poisson distributed with mean $10$. To test this, we use the log of the likelihood as a test statistic: $T(\textbf{X})=\log P(\textbf{X};\lambda=10)$.
+
+- Decide on a rejection set $K$. Use simulation to estimate the size of the test given this rejection set $K$. Tweak the rejection set until the size is less than $0.01$, in order to control the Type I error probability.
+
+- Now sample 100 outcomes from a geometric distribution with mean 10. Calculate the test statistic and see if you can comfortably reject the hypothesis that these data are Poisson. (Note that the mean of the geometric distribution with parameter $\theta$ is $(1-\theta)/\theta$.)
